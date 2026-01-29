@@ -1,0 +1,4 @@
+ocr_helper_text:
+  default: "OCR helper: OCR ONLY — discourse-math (MathJax). No Unicode. No explanation."
+  type: string
+  description: "Text shown above the composer for new posts and edits."
