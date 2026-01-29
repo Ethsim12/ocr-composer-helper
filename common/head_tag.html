@@ -1,17 +1,14 @@
 <script type="text/discourse-plugin" version="0.8">
-  const { api } = require("discourse/lib/plugin-api");
-
   api.decorateComposer((composer) => {
-    // Avoid duplicating if composer re-renders
     if (composer.querySelector(".ocr-helper")) return;
 
     const helper = document.createElement("div");
     helper.className = "ocr-helper";
     helper.setAttribute("role", "note");
 
-    helper.innerText =
-      "OCR helper: OCR ONLY — discourse-math (MathJax). No Unicode. No explanation.";
+    helper.innerText = settings.ocr_helper_text;
 
     composer.prepend(helper);
   });
 </script>
+
